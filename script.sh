@@ -10,10 +10,8 @@ arch-chroot /mnt grub-install /dev/sda &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Tbilisi /etc/localtime &&
 arch-chroot /mnt sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen &&
-# here
 arch-chroot /mnt sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
-# here
 arch-chroot /mnt locale-gen &&
 arch-chroot /mnt touch /etc/hostname &&
 arch-chroot /mnt echo archlinux > /etc/hostname &&
