@@ -5,7 +5,7 @@ mount /dev/sda3 /mnt &&
 mount --mkdir /dev/sda1 /mnt/boot/efi &&
 swapon /dev/sda2 &&
 pacman -Syy archlinux-keyring figlet --noconfirm &&
-pacstrap /mnt alacritty base base-devel bluez bluez-utils efibootmgr kitty firefox gdm git grub htop intel-ucode linux linux-firmware linux-headers lxsession-gtk3 mpv nautilus neovim net-tools networkmanager ntfs-3g obs-studio openssh papirus-icon-theme pipewire pipewire-alsa pipewire-jack pipewire-pulse pulsemixer rofi ttc-iosevka unzip wireplumber xf86-video-intel &&
+pacstrap /mnt alacritty base base-devel bluez bluez-utils efibootmgr kitty firefox gdm git grub htop intel-ucode linux linux-firmware linux-headers lxsession-gtk3 mpv nautilus neovim net-tools networkmanager ntfs-3g obs-studio openssh pipewire pipewire-alsa pipewire-jack pipewire-pulse pulsemixer unzip wireplumber xf86-video-intel &&
 arch-chroot /mnt grub-install /dev/sda &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Tbilisi /etc/localtime &&
